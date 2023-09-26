@@ -1,8 +1,11 @@
-
 class Pokemon {
-    number;
+    numero;
     name;
     type;
     types = [];
+    ability;
+    abilities = [];
+    stat;
+    stats = [];
     photo;
 }

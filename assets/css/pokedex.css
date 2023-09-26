@@ -86,7 +86,7 @@
     border-radius: 1rem;
 }
 
-.pokemon .number {
+.pokemon .numero {
     color: #000;
     opacity: .3;
     text-align: right;
@@ -94,9 +94,9 @@
 }
 
 .pokemon .name {
-    text-transform: capitalize;
     color: #fff;
     margin-bottom: .25rem;
+    text-transform: capitalize;
 }
 
 .pokemon .detail {
@@ -139,16 +139,156 @@
 .pagination button {
     padding: .25rem .5rem;
     margin: .25rem 0;
-    font-size: .625rem;
+    font-size: .8rem;
     color: #fff;
-    background-color: #6c79db;
+    background-color: #171b3d;
     border: none;
     border-radius: 1rem;
 }
 
+/* Detalhe pokemons */
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 1px;
+    right: 12px;
+    z-index: 9999;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 18%;
+    top: 4%;
+    width: 53vh;
+    height: 90.2vh;
+    overflow: auto;
+    
+}
+
+.modal-content {    
+    margin: auto;
+    padding: 10px;
+    border: 0.3rem solid #1f1f213b;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: #fff;
+}
+
+
+.headerBox {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: end;
+    padding: 20px;
+    
+    align-content: center;
+    justify-items: center;
+}
+.headerBox .de {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+}
+
+.headerBox img {
+    max-width: 70%;
+    border: 2px solid #fff; 
+
+}
+
+.headerBoxInside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 15px;
+}
+
+.headerBox .numero {
+    color: #000;
+    opacity: .5;
+    text-align: right;
+    font-size: .9rem;
+    margin-top: 1rem;
+}
+
+.headerBox .name {
+    color: #000000;
+    margin-bottom: .25rem;
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+.item {
+  color:#302727c7;
+  margin-bottom: .25rem;
+  text-transform: capitalize;
+  list-style: none;
+}
+
+.headerBox .abilitiesBox {
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: auto;
+}
+
+.headerBox .statsBox {
+    text-align: center;
+    text-transform: capitalize;
+    list-style: none;
+}
+
+.order {
+    text-align: center;
+    list-style: none;
+    text-transform: capitalize;
+    color: #302727c7;
+}
+
+/*
+.things1 {
+    list-style: none;
+    margin: 0.25rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-transform: capitalize;
+}
+
+.things2 {
+    list-style: none;
+    margin: 0.25rem;
+    text-transform: capitalize;
+}
+
+
+
+
+
+
+.typesBox {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+*/
+
+
+
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .modal {
+        left: 22%;
+        top: 9%;
+        width: 35vh;
+        height: 81vh;
     }
 }
 
@@ -156,10 +296,24 @@
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    .modal {
+        left: 19%;
+        top: 6%;
+        width: 53vh;
+        height: 89.2vh;
+    }
 }
 
 @media screen and (min-width: 992px) {
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .modal {
+        left: 23%;
+        top: 2%;
+        width: 79vh;
+        height: 89.2vh;
     }
 }
